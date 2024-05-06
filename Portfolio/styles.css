@@ -1,3 +1,5 @@
+
+
 *{
     margin: 0;
     padding: 0;
@@ -47,17 +49,18 @@ span{
     margin: 30px 0px;
 }
 
-/*Portfolio*/
-#Portfolio{
-    display: flex;
-    flex-direction: column;
+/*index.html*/
+{
 
-}
-.gallery{
-    display: flex;
-}
-.gallery img{
-    width: 360px;
-    height: 400px;
+        align-items: center;
+        display: flex;
+        flex-grow: 0;
+        flex-shrink: 0;
+        justify-content: center;
+        max-width: 100%;
+        position: relative;
+        text-align: var;
+        z-index: 1;
+    
 }
 
