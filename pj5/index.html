@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P5</title>
+    <script src="./p5.js"></script>
+    <script src="./script.js"></script>
+    <style type="text/css">
+        img {
+            display: block;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+   <div id="p5-container">
+    <canvas id="defaultCanvas0" class="p5Canvas" width="3840" height="2160"
+        style="width: 1920px; height: 1080px; cursor: default;"></canvas>
+   </div> 
+    <script>
+let backgroundImage;
+
+let rectWidth, rectHeight;
+let rect1X, rect1Y;
+
+function preload() {
+   
+    backgroundImage = loadImage('onion.png');
+}
+
+function setup{
+    let canvas = createCanvas(backgroundImage.width, backgroundImage.height);
+    canvas.parent('p5-contauner'); 
+    rectHeight = height / 4;
+    let offsetY = height / 4;
+    rect1X = 3 * width / 4 - rectWidth / 2;
+    rect1Y = height / 8; // 
+}
+function draw() {
+    background(backgroundImage);
+    if (
+        mouseX > rect1X && mouseX < rect1X + rectWidth && 
+        mouseY > rect1Y && mouseY < rect1Y + rectHeight
+    ){
+        cursor(HAND);
+    } else {
+        cursor(ARROW); 
+    }
+}
+
+function mouseClicked() {
+    if (
+        mouseX > rect1X && mouseX < rect1X + rectWidth && 
+        mouseY > rect1Y && mouseY < rect1Y + rectHeight
+    ) {  
+        window.location.href = 'onion.png'; 
+    } 
+}
+
+    </script>
+</body>
+
+</html>
